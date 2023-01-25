@@ -1,0 +1,14 @@
+<%= render @post %>
+<div class="row">
+  <div class="col">
+    <%= link_to "Back to posts", dashboard_path, class: "btn btn-dark" %>
+  </div>
+  <div class="col text-right">
+    <% if current_user.is_owner?(@post) %>
+      <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-success" %>
+      <%= link_to "Destroy this post", @post, data: { "turbo-method": :delete }, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>
+  
+  

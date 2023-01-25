@@ -1,0 +1,14 @@
+<div class="col">
+  <div id="<%= dom_id post %>" class="card text-center" style="margin: 1rem 0;">
+    <div class="card-header">
+      <%= post.title %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= post.body.slice(0..20) %>...</h5>
+      <p class="card-text">Author: <%= post.user&.email %></p>
+    </div>
+    <div class="card-footer">
+      <%= link_to "Show this post", post, class: "btn btn-primary" unless action_name == 'show' %>
+    </div>
+  </div>
+</div>

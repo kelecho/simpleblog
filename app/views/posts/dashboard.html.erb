@@ -1,0 +1,6 @@
+<h1 class="text-center">Posts of <%= current_user.email %></h1>
+<%= link_to "New post", new_post_path, class: "btn btn-primary" %>
+<div id="posts">
+  <%= render @posts %>
+</div>
+

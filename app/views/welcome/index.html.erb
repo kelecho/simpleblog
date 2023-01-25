@@ -1,0 +1,7 @@
+<h1 class="text-center">Simple Blog</h1>
+<h2>List of Posts</h2>
+<div class="row">
+    <% @posts.each_slice(2) do |posts| %>
+        <%= render posts %>
+    <% end %>
+</div>
